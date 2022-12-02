@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-from task import a
+from main import a
 
 # this file will not run once imported
 
