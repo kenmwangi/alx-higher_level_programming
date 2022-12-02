@@ -2,7 +2,7 @@
 
 from sys import argv
 
-from task import add, sub, mul, div
+from main import add, sub, mul, div
 
 operators = ["+", "-", "*", "/"]
 arg_len = len(argv)
