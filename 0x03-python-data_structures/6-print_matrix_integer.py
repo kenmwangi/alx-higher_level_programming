@@ -8,7 +8,7 @@ def print_matrix_integer(matrix=[[]]):
     else:
         for row in matrix:
             for item in row:
-                if row.index(item) != len(row) - 1:
+                if now.index(item) != len(row) - 1:
                     endspace = " "
                 else:
                     endspace = " "
