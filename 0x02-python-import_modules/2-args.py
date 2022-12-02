@@ -3,7 +3,7 @@
 from sys import argv
 
 # length of argv
-argv_length = len(argv) -1
+argv_length = len(argv) - 1
 
 # The code will not run when file is imported
 if __name__ == "__main__":
