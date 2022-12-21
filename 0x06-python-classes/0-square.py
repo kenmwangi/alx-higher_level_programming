@@ -9,10 +9,8 @@ my_square = Square()
 
 """
 
+
 class Square:
+    """Blueprint of square"""
 
-    """
-    Blueprint of square
-
-    """
     pass
