@@ -10,11 +10,7 @@ size instantiation - no type
 
 
 class Square:
-    """
-    defines blueprint of a square
-
-    Attribute - size of square object
-    """
+    """defines blueprint of a square - Attribute - size of square object"""
 
 
     def __init__(self, size):
