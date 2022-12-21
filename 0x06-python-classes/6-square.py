@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-
-"""
-Square Class
+"""Square Class
 
 module defining class Square
 
 """
+
+
 class Square:
     """
     blueprint of a square
