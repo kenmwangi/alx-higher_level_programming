@@ -15,14 +15,14 @@ class Rectangle:
 
     def __str__(self):
         """ returning string representation of Rectangle instance"""
-        if self.__height == 0 or self.__width == 0:
-            return ""
-        rect_str = ""
-        for i in range(self.__height):
-            for j in range(self.__width):
-                rec_str += "#"
-            rec_str += "\n"
-        return rec_str[:-1]
+        total = ""
+        if self.__height == 0 or self.width == 0:
+            return total
+        for i in range(self._height):
+            total += ("#" * self._width)
+            if i is not self.__height - 1:
+                total += "\n"
+            return total
 
     # instance of width
     @property
