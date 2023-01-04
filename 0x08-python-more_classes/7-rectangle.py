@@ -53,7 +53,7 @@ class Rectangle:
         if self.__height == 0 or self.width == 0:
             return total
         for i in range(self.__height):
-            for j in  range(self.__width):
+            for j in range(self.__width):
                 try:
                     total += str(self.print_symbol)
                 except Exception:
