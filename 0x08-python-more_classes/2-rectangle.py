@@ -10,8 +10,8 @@ class Rectangle:
     """ Blueprint of rectangle object"""
     def __init__(self, width=0, height=0):
         """ Object constructor method"""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     # instance of width
     @property
@@ -50,5 +50,3 @@ class Rectangle:
     def perimeter(self):
         """ public object method - returns current rectangle perimeter"""
         return 2 * (self.__width * self.__height)
-
-
