@@ -8,10 +8,12 @@ Real definition of rectangle with private instances
 
 class Rectangle:
     """ Blueprint of rectangle object"""
+
     def __init__(self, width=0, height=0):
         """ Object constructor method"""
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     # instance of width
     @property
