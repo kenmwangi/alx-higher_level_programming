@@ -10,23 +10,8 @@ class Rectangle:
     """ Blueprint of rectangle object"""
     def __init__(self, width=0, height=0):
         """ Object constructor method"""
-        self.__width = width
-        self.__height = height
-
-    def __str__(self):
-        """ returning string representation of Rectangle instance"""
-        if self.__height == 0 or self.__width == 0:
-            return ""
-        rect_str = ""
-        for i in range(self.__height):
-            for j in range(self.__width):
-                rec_str += "#"
-            rec_str += "\n"
-        return rec_str[:-1]
-
-    def __repr__(self):
-        """ Using eval() to recreate string representation of rectangle instance"""
-        return f"Rectangle({self.__width}, {self.__height})"
+        self.width = width
+        self.height = height
 
     # instance of width
     @property
@@ -58,6 +43,19 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
+    def __str__(self):
+        total = ""
+        if self.__height == 0 or self.width == 0:
+            return total
+        for i in range(self.__height):
+            total += ("#" * self.__width)
+            if i is not self.__height - 1:
+                total += "\n"
+        return total
+
+    def __repr__(self):
+        return f"Rectangle({self.__width}, {self.__height})"
+
     def area(self):
         """ Public Object method - returns current rectangle perimeter"""
         return self.__width * self.__height
@@ -67,6 +65,4 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
         else:
-            return 2 * (self.__width * self.__height)
-
-
+            return (2 * self.__width) + (2 * self.__height)
