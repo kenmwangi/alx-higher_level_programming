@@ -13,17 +13,6 @@ class Rectangle:
         self.width = width
         self.height = height
 
-    def __str__(self):
-        """ returning string representation of Rectangle instance"""
-        total = ""
-        if self.__height == 0 or self.width == 0:
-            return total
-        for i in range(self._height):
-            total += ("#" * self._width)
-            if i is not self.__height - 1:
-                total += "\n"
-            return total
-
     # instance of width
     @property
     def width(self):
@@ -53,6 +42,16 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def __str__(self):
+        total = ""
+        if self.__height == 0 or self.width == 0:
+            return total
+        for i in range(self.__height):
+            total += ("#" * self.__width)
+            if i is not self.__height - 1:
+                total += "\n"
+        return total
 
     def area(self):
         """ Public Object method - returns current rectangle perimeter"""
