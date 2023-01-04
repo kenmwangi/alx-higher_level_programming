@@ -22,7 +22,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """ Sets width private attribute value """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -49,4 +49,6 @@ class Rectangle:
 
     def perimeter(self):
         """ public object method - returns current rectangle perimeter"""
-        return 2 * (self.__width * self.__height)
+        if self.__width is 0 or self.__height is 0:
+            return 0
+        return (2 * self.__width) + (2 * self.__height)
