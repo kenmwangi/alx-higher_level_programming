@@ -10,8 +10,8 @@ class Rectangle:
     """ Blueprint of rectangle object"""
     def __init__(self, width=0, height=0):
         """ Object constructor method"""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     def __str__(self):
         """ returning string representation of Rectangle instance"""
@@ -63,6 +63,4 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
         else:
-            return 2 * (self.__width * self.__height)
-
-
+            return (2 * self.__width) + (2 * self.__height)
