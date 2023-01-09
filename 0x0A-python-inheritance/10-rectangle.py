@@ -13,6 +13,7 @@ class Square(Rectangle):
         """ Initializing instance with args: wdth and height of rectangle """
 
         self.integer_validator("size", size)
+        super().__init__(size, size)
         self.__size = size
 
     def __str__(self):
